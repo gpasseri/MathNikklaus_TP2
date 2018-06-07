@@ -66,7 +66,7 @@ for i=1 : 365
 endfor
 
 hold off
-=======
+
 # Nettoyage des variables et de la console 
 clc;
 # cla;
