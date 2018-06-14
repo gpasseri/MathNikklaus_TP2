@@ -133,15 +133,16 @@ endfor
 
 for i=1 : 365
   if  i > 1
-    difference = tabResultats(i) - tabResultats(i - 1)
+    # difference = tabResultats(i) - tabResultats(i - 1)
   endif 
   # strcat(int2str(i), ' nombre(s) de retraits au bout de ', {' '}, int2str(nbAnnee), ' donne un resultat de ', {' '}, int2str(tabResultats(i)), {' CHF '}) 
 endfor
 
 # ---- point n°4 -------------------------------------------------------------------
 
-# Donne 0-0006 : converge vers 0
-resultatGrandNbRetraits = calculInteretSelonF(capital, taux, nbAnnee, 1000) - calculInteretSelonF(capital, taux, nbAnnee, 999)
+# Donne 0,0006 : converge vers 0
+resultatGrandNbRetraits =  calculInteretSelonF(capital, taux, nbAnnee, 1000) - calculInteretSelonF(capital, taux, nbAnnee, 999);
+sprintf('%.5f', resultatGrandNbRetraits)
 
 # On voit cette évolution également dans le point 3, en observant la différence de gain avec l'ajout un retrait de plus. 
 
