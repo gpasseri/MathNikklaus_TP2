@@ -38,10 +38,10 @@ for i=1 : nbAnnee
   resultat6Mois(i+1) = calculInteret6Mois(capital, taux, i);
 endfor
 
-%hold on;
-%plot(resultat);
-%plot(resultat6Mois);
-%hold off;
+hold on;
+plot(resultat);
+plot(resultat6Mois, 'r');
+hold off;
 
 # différence sur le nombre d'années
 resultat6Mois(nbAnnee+1) - resultat(nbAnnee+1)
@@ -61,7 +61,7 @@ for i=1 : 365
   for j=1 : nbAnnee
     resultatFrequence(j+1) = calculInteretSelonF(capital, taux, j, i);
   endfor
-  plot(resultatFrequence);
+  #plot(resultatFrequence);
   resultatFrequence = 0;
 endfor
 
